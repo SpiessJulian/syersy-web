@@ -1,0 +1,45 @@
+
+
+
+
+
+@media only screen and (min-width: 1025px) and (max-width: 4000px) {
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0px 1fr 300px 650px 400px;
+    grid-template-areas: 
+    "navigationMenu navigationMenu"
+    "presentation presentation "
+    "aboutUs aboutUs "
+    "services team"
+    "contact contact"
+    ;
+}
+
+.navigationMenu {
+    grid-area: navigationMenu;
+}
+
+.presentation {
+    grid-area: presentation;
+}
+
+.aboutUs {
+    grid-area: aboutUs;
+}
+
+.services {
+    grid-area: services;
+}
+.team {
+    grid-area: team;
+}
+.contact {
+    grid-area: contact;
+}
+
+.foot {
+    grid-area: foot;
+}
+}

@@ -1,0 +1,223 @@
+
+
+/*--------------------------------------------------------------
+# Root
+--------------------------------------------------------------*/
+
+:root{
+  --primary-color: #333;
+  --primary-color-opacity: #111;
+  --secondary-color: #FFFFFF;
+  --secondary-color-opacity: rgba(246,246,246,0.64);
+  --main-color: #18d26e;
+  --tertiary-color: black;
+  --tertiary-color-transparent: rgba(0, 0, 0, 0.88);
+}
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--secondary-color);
+  border-radius: 1px;
+}
+
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997; 
+}
+
+.headerOnScroll{
+  background-color: var(--tertiary-color-transparent);
+}
+
+/*
+.headerOnTop{
+}
+*/
+
+#header.header-scrolled {
+  background: var(--tertiary-color-transparent);
+  padding: 20px 0;
+  height: 72px;
+  transition: all 0.5s;
+}
+
+#header #logo {
+  float: left;
+}
+#header .loginlogout {
+  float: right;
+  margin-right: 0px;
+  order: 1;
+}
+
+@media(max-width: 600px){
+  #header .loginlogout {
+    order: 0;  
+  }
+}
+
+
+#header .loginlogout a{
+  margin-left: 10px;
+}
+
+@media (min-width: 1024px) {
+  #header #logo {
+    padding-left: 60px;
+  }
+}
+
+#header #logo h1 {
+  font-size: 34px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+#header #logo h1 a, #header #logo h1 a:hover {
+  color: var(--secondary-color);
+  padding-left: 10px;
+  border-left: 4px solid var(--main-color);
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Nav Menu Essentials */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 5px;
+}
+
+.nav-menu, .nav-menu{
+  padding-right: 60px;
+}
+
+@media (max-width: 600px) {
+  .nav-menu, .nav-menu {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    float: right;
+    background-color: var(--tertiary-color-transparent);
+  }
+}
+
+.nav-menu ul {
+  
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  background-color: transparent;
+  position: relative;
+  white-space: nowrap;
+}
+
+
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+.hamburgerBtn{
+  border-block-color: var(--main-color);
+}
+
+.hamburger{
+  color: var(--main-color);
+}
+
+
+/* Nav Meu Container */
+#navbarNav {
+  float: right;
+  margin: 0;
+}
+
+
+/* Nav Meu Styling */
+.nav-menu a {
+  padding: 0 8px 10px 0px;
+  text-decoration: none;
+  display: inline-block;
+  color: var(--secondary-color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.nav-menu li:hover > a, .nav-menu > .menu-active > a {
+  color: var(--main-color);
+}
+
+.nav-menu > li {
+  margin-left: 10px;
+}
+
+.nav-menu ul {
+  margin: 0 0 0 0;
+  padding: 10px;
+  box-shadow: 0px 0px 30px var(--primary-color);
+  background: var(--secondary-color);
+}
+
+.nav-menu ul li {
+  transition: 0.3s;
+}
+
+.nav-menu ul li a {
+  padding: 10px;
+  color: var(--primary-color);
+  transition: 0.3s;
+  display: block;
+  font-size: 13px;
+  text-transform: none;
+}
+
+.nav-menu ul li:hover > a {
+  color: var(--main-color);
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+

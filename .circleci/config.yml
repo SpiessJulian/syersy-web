@@ -1,0 +1,34 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: julianspiess/syersy-web
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+    working_directory: ~/syersy-web
+    steps:
+      - checkout
+      - run: docker build -t julianspiess/syersy-web ../
+      - run: docker run julianspiess/syersy-web npm run test
+  deploy:
+    machine:
+      image: ubuntu-1604:202007-01
+    working_directory: ~/syersy-web
+    environment:
+      HASH: $(git rev-parse HEAD)
+    steps:
+      - checkout
+      - run: bash ../deploy.sh
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: release

@@ -1,0 +1,85 @@
+
+@media only screen and (max-width: 600px) {
+.aboutUsContainer {
+  height: 440px;
+  /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);*/
+  background: black;
+  z-index: 1000;
+}
+
+.aboutUsSes {
+  font-size: 55px;
+  color: white;
+  font-family: Arial, black;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.aboutUsSubSes{
+  font-size: 20px;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+  .aboutUsContainer {
+    background:black;
+    background: linear-gradient(180deg, black 0%, rgba(26,26,26,1) 35%);
+    height: 350px;
+    /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);*/
+  }
+
+  .aboutUsSes {
+    font-size: 55px;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    padding-top: 70px;
+    text-align: center;
+  }
+  
+  .aboutUsSubSes{
+    font-size: 25px;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 4000px) {
+
+  .aboutUsContainer {
+    background: black; /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right,  #1E8449, black, #1E8449);  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #1E8449, black, #1E8449);*/
+  }
+
+  .aboutUsSes {
+    font-size: 55px;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    padding-top: 60px;
+    text-align: center;
+  }
+  
+  .aboutUsSubSes{
+    font-size: 25px;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+ 
+}

@@ -1,0 +1,185 @@
+
+ @media only screen and (max-width: 600px) {
+
+  .teamBg {
+    background: linear-gradient(180deg, black 0%, rgba(26,26,26,1) 80%);    
+    margin-top: -45%;
+    /*clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);*/
+    z-index: 99;
+    height: 970px;
+  
+  }
+
+.teamTitle{
+  padding-top: 70px;
+    text-align: center;
+    font-size: 55px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #underTxt {
+    margin-top: -35px;
+  }
+  
+  
+  .picShape {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    border-radius: 15px;
+  }
+  
+  
+  
+  
+  
+  .juli {
+    width: "160px";
+    height: "220px";
+    margin-left: 15px;
+    grid-area: juli;
+    text-align: center;
+    padding-top: 5%;
+    color: white;
+  }
+  
+  #juliSize {
+    width: "160px";
+      height: "220px";
+      
+  }
+  
+  .ale {
+    grid-area: ale;
+    text-align: center;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .teamBg {
+    background: black;
+    background: linear-gradient(180deg, black 0%, rgba(26,26,26,1) 80%);  
+     margin-top: -45%;
+    /*clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);*/
+    z-index: 99;
+    height: 550px;
+  }
+
+.teamTitle{
+    padding-top: 70px;
+    text-align: center;
+    font-size: 55px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #underTxt {
+    margin-top: -35px;
+  }
+  
+  
+  .picShape {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    border-radius: 15px;
+  }
+  
+  
+  
+  
+  
+  .juli {
+    width: "160px";
+    height: "220px";
+    padding-left: 22%;
+    grid-area: juli;
+    text-align: center;
+    padding-top: 5%;
+    color: white;
+    float: left;
+  }
+  
+  #juliSize {
+    width: "160px";
+      height: "220px";
+      
+  }
+  
+  .ale {
+    grid-area: ale;
+    text-align: center;
+    color: white;
+    padding-top: 5%;
+    padding-right: 17%;
+  }
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 4000px) {
+
+  .teamBg {
+    /*background: url("/teamFondo.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;*/
+    background: black;
+    background: linear-gradient(180deg, black 0%, rgba(26,26,26,1) 80%);
+    margin-left: 2px;
+  }
+
+.teamTitle{
+  padding-top: 70px;
+    text-align: center;
+    font-size: 55px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #underTxt {
+    margin-top: -35px;
+  }
+  
+  
+  .picShape {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    border-radius: 15px;
+  }
+  
+  .juli {
+    width: "160px";
+    height: "220px";
+    padding-left: 25%;
+    grid-area: juli;
+    text-align: center;
+    padding-top: 5%;
+    color: white;
+    float: left;
+  }
+  
+  #juliSize {
+    width: "160px";
+      height: "220px";
+      
+  }
+  
+  .ale {
+    grid-area: ale;
+    text-align: center;
+    color: white;
+    padding-top: 5%;
+    padding-right: 17%;
+  }
+
+  .aleText {
+    font-size: 25px;
+  }
+
+  .julianText {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,221 @@
+/*
+  Hoja de estilos CSS.
+  Esta hoja de estilos se utiliza en toda la aplicación React.
+
+  Author: David Julián Spiess.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Root
+--------------------------------------------------------------*/
+.loginLogo img {
+  max-width: 100%;
+}
+
+:root{
+  --primary-color: #333;
+  --primary-color-opacity: #111;
+  --secondary-color: #FFFFFF;
+  --secondary-color-opacity: rgba(246,246,246,0.64);
+  --main-color: #18d26e;
+  --tertiary-color: black;
+  --tertiary-color-transparent: rgba(0, 0, 0, 0.88);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+  /*html, body {
+  
+overflow-x: hidden !important;
+}*/
+
+body {
+  background: var(--secondary-color);
+  color: var(--primary-color-opacity);
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: var(--main-color);
+  transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+  color: var(--main-color);
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 10px;
+}
+
+
+
+/* Mensajes de Alertas*/
+.alerts-leave {
+  opacity: 1;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-bottom: 20px;
+  height: 50px;
+}
+
+/* Mensajes de Alertas*/
+.alerts-leave.alerts-leave-active {
+  overflow: hidden;
+  opacity: 0.01;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  height: 0px;
+  transition: opacity 300ms ease-in,
+              padding-top 500ms ease-in,
+              padding-bottom 500ms ease-in,
+              margin-bottom 500ms ease-in,
+              height 500ms ease-in;
+}
+
+/* Para el login*/
+
+.volverButton {
+  margin-top: 10px;
+  width: 242px;
+  margin-left: -5px;
+  border: 2px solid #5AA062;
+  color: white;
+}
+
+.ingresarTitle {
+  margin-left: 3%;
+}
+
+.ingresarButton {
+  margin-top: 18px;
+  width: 242px;
+  margin-left: -5px;
+}
+
+.loginLogo {
+  margin-left: 40%;
+  grid-area: loginLogo;
+  max-width: 100%;
+}
+
+
+.LogGrid {
+  height: 100vh;
+  background-color: #1D201E;
+  padding-top: 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "loginLogo logForm"
+  ;
+  color: white;
+}
+
+.logForm {
+  grid-area: logForm;
+  padding-left: 15%;
+}
+
+.passPadding {
+  margin-top: 1.5%;
+}
+
+/* para el profile */
+
+.profileMainBg {
+ background-color: #1D201E;
+ min-height: 100vh; 
+}
+
+@media only screen and (max-width: 600px) {
+  .LogGrid {
+    height: 100vh;
+    background-color: #1D201E;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 205px 1fr;
+    grid-template-areas: 
+    "loginLogo"
+    "logForm"
+    ;
+    color: white;
+  }
+
+  .loginLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .logForm {
+    max-width: 100%;
+    padding-left: 22%;
+  }
+
+  .ingresarTitle {
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1100px) {
+  .LogGrid {
+    height: 100vh;
+    background-color: #1D201E;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 205px 1fr;
+    grid-template-areas: 
+    "loginLogo"
+    "logForm"
+    ;
+    color: white;
+  }
+
+  .loginLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .logForm {
+    margin-top: 10%;
+    padding-left: 35%;
+  }
+
+
+}
+
+
+
+
+

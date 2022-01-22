@@ -1,0 +1,80 @@
+
+.imgBorder {
+    border-radius: 12px;
+    margin-left: 1px;
+    padding-right: 1px;
+}
+
+.proyectMainBg{
+    min-height: 100vh;
+}
+
+.secondBg {
+    text-align: center;
+}
+
+.proyectShape {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    width: 350px;
+    margin-top: 2.5%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    border: 3px solid #18d26e;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.btnIngresar {
+    margin-top: 15px;
+    border: 2px solid #18d26e;
+    color: white;
+    width: 100%;
+}
+
+.wordsLocation {
+    margin-left: 5.5%;
+}
+
+#home {
+    margin-right: 1%;
+    width: 90px;
+}
+
+#signOut {
+    width: 90px;
+}
+
+.closeBtn {
+    text-align: center;
+    width: 100px;
+}
+
+.proyectTitle {
+    color: white;
+    font-size: 3.5em;
+    padding-top: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+
+.proyectShape {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    width: 350px;
+    margin-top: 2.5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    border: 3px solid #18d26e;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+}
+
+
+
+
+
