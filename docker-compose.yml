@@ -5,6 +5,7 @@ services:
       dockerfile: Dockerfile.dev
       context: ./app
     restart: always
+    image: julianspiess/syersy-web
     volumes:
       - ./app:/app
     ports: 

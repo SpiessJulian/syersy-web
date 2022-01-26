@@ -4,12 +4,12 @@ jobs:
     docker:
       - image: julianspiess/syersy-web
         auth:
-          username: $DOCKERHUB_USERNAME
-          password: $DOCKERHUB_PASSWORD
+          username: $DOCKER_USERNAME
+          password: $DOCKER_PASSWORD
     working_directory: ~/syersy-web
     steps:
       - checkout
-      - run: docker build -t julianspiess/syersy-web ../
+      - run: docker build -t julianspiess/syersy-web ../app
       - run: docker run julianspiess/syersy-web npm run test
   deploy:
     machine:
@@ -18,7 +18,6 @@ jobs:
     environment:
       HASH: $(git rev-parse HEAD)
     steps:
-      - checkout
       - run: bash ../deploy.sh
 
 workflows:
