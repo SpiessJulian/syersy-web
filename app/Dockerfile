@@ -1,16 +1,14 @@
 FROM node:lts-alpine
 
-RUN mkdir -p /syersy/app/node_modules && chown -R ses:ses /syersy/app
+RUN mkdir -p /syersy/app/node_modules
 
 WORKDIR /syersy/app
 
 COPY package*.json ./
 
-USER ses
-
 RUN npm install
 
-COPY --chown=ses:ses . .
+COPY . .
 
 RUN npm run build
 
