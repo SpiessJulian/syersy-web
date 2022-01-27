@@ -5,7 +5,7 @@ jobs:
     steps:
       - checkout 
       - run: |
-         echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
+         echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_USERNAME --password-stdin
       - run: docker build -t julianspiess/syersy-web ./app
       - run: docker run julianspiess/syersy-web npm run test
   deploy:
@@ -27,4 +27,4 @@ workflows:
             - build
           filters:
             branches:
-              only: release
+              only: master
