@@ -3,12 +3,10 @@ jobs:
   build:
     docker:
       - image: julianspiess/syersy-web
-        auth:
-          username: $DOCKER_USERNAME
-          password: $DOCKER_PASSWORD
     working_directory: ~/syersy-web
     steps:
       - checkout
+      - setup_remote_docker
       - run: docker build -t julianspiess/syersy-web ../app
       - run: docker run julianspiess/syersy-web npm run test
   deploy:
