@@ -2,30 +2,10 @@ version: 2
 jobs:
   build:
     machine: true
-    working_directory: ~/syersy-web
     steps:
       - checkout 
       - run: |
          echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_USERNAME --password-stdin
       - run: docker build -t julianspiess/syersy-web ./app
       - run: docker run julianspiess/syersy-web npm run test
-  deploy:
-    machine: true
-    working_directory: ~/syersy-web
-    environment:
-      HASH: "$(git rev-parse HEAD)"
-    steps:
-      - checkout
       - run: bash ./deploy.sh
-
-workflows:
-  version: 2
-  build-and-deploy:
-    jobs:
-      - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
