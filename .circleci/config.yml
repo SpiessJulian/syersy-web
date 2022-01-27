@@ -1,12 +1,11 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: julianspiess/syersy-web
-    working_directory: ~/syersy-web
+    machine: true
     steps:
-      - checkout
-      - setup_remote_docker
+      - checkout 
+      - run: |
+         echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
       - run: docker build -t julianspiess/syersy-web ../app
       - run: docker run julianspiess/syersy-web npm run test
   deploy:
