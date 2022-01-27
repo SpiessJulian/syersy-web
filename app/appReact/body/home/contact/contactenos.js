@@ -20,7 +20,7 @@ class Contactenos extends Component{
 						You can send us an email to<br/>
 						info@syersy.com<br/>   
 						or call us at<br/>  
-						+54 9 3624 149755<br/>
+						+54 9 3624 774118<br/>
 						(You can communicate with us through WhatsApp)<br/>
 						Resistencia Chaco - Argentina. 
 					</p>
