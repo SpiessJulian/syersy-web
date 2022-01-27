@@ -4,9 +4,6 @@ jobs:
     machine: true
     steps:
       - checkout 
-      - add_ssh_keys:
-          fingerprints:
-            - "18:08:51:1c:2c:a8:74:fb:fb:f3:be:6c:aa:33:60:2b"
       - run: |
          echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_USERNAME --password-stdin
       - run: docker build -t julianspiess/syersy-web ./app
