@@ -10,12 +10,12 @@ jobs:
       - run: docker build -t julianspiess/syersy-web ./app
       - run: docker run julianspiess/syersy-web npm run test
   deploy:
-    machine:
-      image: ubuntu-1604:202007-01
+    machine: true
     working_directory: ~/syersy-web
     environment:
       HASH: $(git rev-parse HEAD)
     steps:
+      - checkout
       - run: bash ./deploy.sh
 
 workflows:
