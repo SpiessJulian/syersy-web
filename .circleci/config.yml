@@ -6,7 +6,7 @@ jobs:
       - checkout 
       - run: |
          echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
-      - run: docker build -t julianspiess/syersy-web /app
+      - run: docker build -t julianspiess/syersy-web ./app
       - run: docker run julianspiess/syersy-web npm run test
   deploy:
     machine:
