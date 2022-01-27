@@ -1,4 +1,4 @@
-echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --pasword-stdin
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 docker build -t julianspiess/syersy-web:"$HASH" ./app
 docker push julianspiess/syersy-web:"$HASH"
 

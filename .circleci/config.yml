@@ -13,7 +13,7 @@ jobs:
     machine: true
     working_directory: ~/syersy-web
     environment:
-      HASH: $(git rev-parse HEAD)
+      HASH: "$(git rev-parse HEAD)"
     steps:
       - checkout
       - run: bash ./deploy.sh
