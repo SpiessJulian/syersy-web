@@ -15,7 +15,7 @@ jobs:
     environment:
       HASH: $(git rev-parse HEAD)
     steps:
-      - run: bash ../deploy.sh
+      - run: bash ./deploy.sh
 
 workflows:
   version: 2
