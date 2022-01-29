@@ -5,7 +5,7 @@ jobs:
     steps:
       - checkout 
       - run: 
-          name: Loggin in DockerHub.
+          name: Loggin into DockerHub.
           command: echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_USERNAME --password-stdin
       - run: 
           name: Building docker image.
